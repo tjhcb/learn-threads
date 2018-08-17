@@ -4,4 +4,5 @@ BlockingQueue Interface
 	Atomic in Java: Atomic operation. An atomic operation is an operation which is performed as a single unit of work without the possibility of interference from other operations.
 	The Java language specification guarantees that reading or writing a variable is an atomic operation(unless the variable is of type long or double ).
 3. Primarily used for producer consumer problem
-4. Present in collections framework
+4. Present in collections framework under concurrent package
+5. methods used are put(String e) and take()
