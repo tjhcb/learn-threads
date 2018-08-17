@@ -1,0 +1,7 @@
+BlockingQueue Interface
+1. null not allowed.. throws NPE
+2. thread-safe
+	Atomic in Java: Atomic operation. An atomic operation is an operation which is performed as a single unit of work without the possibility of interference from other operations.
+	The Java language specification guarantees that reading or writing a variable is an atomic operation(unless the variable is of type long or double ).
+3. Primarily used for producer consumer problem
+4. Present in collections framework
