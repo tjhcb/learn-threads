@@ -1,0 +1,6 @@
+Volatile Keyword
+1. Read/write directly from/to memory
+2. To achieve synchronization need to ensure
+	Mutual Exclusion: only one thread executes a critical section at a time
+	Visibility: changes made by one thread to a shared data are visible to other threads
+3. Happens-Before: All non-volatile variable values are written to memory with volatile variable value after Java5
