@@ -98,16 +98,15 @@ public class DataProducerCosumer {
 	public void produce() throws InterruptedException{
 		while(i<20){
 			list.add(""+ ++i);
-			Thread.sleep(500);
 			System.out.println("produce: " + list.toString());
+			Thread.sleep(500);
 		}
 	}
 	
 	public void consume() throws InterruptedException{
-		System.out.println(list.size());
 		while(list.size() > 0){
-			System.out.println(list.size());
-			list.remove(0);
+			String i = list.remove(0);
+			System.out.println("consumed: " + i);
 			Thread.sleep(600);
 		}
 		System.out.println("consume: " + list.toString());
