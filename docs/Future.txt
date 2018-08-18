@@ -1,0 +1,6 @@
+Future interface in Java
+1. Represents result of an asynchronous task
+2. isDone() tells whether the async task is done or not
+3. get() return the result of async task. It will block execution until result is obtained
+4. task can be cancelled using cancel(boolean)
+5. isCancelled() tells whether the task was cancelled
