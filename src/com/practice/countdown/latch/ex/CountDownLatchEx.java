@@ -28,7 +28,7 @@ class MyThread implements Runnable {
 	
 	@Override
 	public void run() {
-		System.out.println("Before countdown");
+		System.out.println("Before countdown " + Thread.currentThread());
 		latch.countDown();
 		
 		try {
@@ -37,6 +37,6 @@ class MyThread implements Runnable {
 			e.printStackTrace();
 		}
 		
-		System.out.println("After countdown");
+		System.out.println("After countdown " + Thread.currentThread());
 	}
 }

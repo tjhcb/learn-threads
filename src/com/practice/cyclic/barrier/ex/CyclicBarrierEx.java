@@ -5,7 +5,7 @@ import java.util.concurrent.CyclicBarrier;
 
 public class CyclicBarrierEx {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException, BrokenBarrierException {
 		Runnable afterCB = () -> {
 			System.out.println("Post Barrier Action");
 		};
@@ -18,6 +18,7 @@ public class CyclicBarrierEx {
 		t1.start();
 		t2.start();
 		t3.start();
+		
 	}
 }
 
@@ -31,10 +32,14 @@ class MyThread implements Runnable {
 	
 	@Override
 	public void run() {
-		System.out.println("Before Barrier");
+		System.out.println("Before Barrier " + Thread.currentThread());
 		try {
 			cyclicBarrier.await();
-			System.out.println("After Barrier");
+			System.out.println("After Barrier " + Thread.currentThread());
+			
+			cyclicBarrier.await();
+			System.out.println("another barrier");
+			cyclicBarrier.await();
 		} catch (InterruptedException | BrokenBarrierException e) {
 			e.printStackTrace();
 		}
